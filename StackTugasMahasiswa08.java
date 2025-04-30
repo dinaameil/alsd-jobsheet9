@@ -2,6 +2,7 @@ public class StackTugasMahasiswa08 {
     Mahasiswa08[] stack;
     int top;
     int size;
+    int konversiDesimalKeBiner;
     
     public StackTugasMahasiswa08(int size) {
         this.size = size;
@@ -70,4 +71,19 @@ public class StackTugasMahasiswa08 {
         }
         System.out.println();
     }
+
+    public String konversiDesimalKeBiner(int nilai) {
+        StackKonversi08 stack = new StackKonversi08();
+         while (nilai > 0) {
+            int sisa = nilai % 2;
+            stack.push(sisa);
+            nilai = nilai / 2;
+        }
+        String biner = new String();
+        while (!stack.isEmpty()) {
+            biner += stack.pop();
+        }
+            return biner;
+    }
+    
 }
