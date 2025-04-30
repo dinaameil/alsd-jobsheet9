@@ -4,7 +4,7 @@ public class StackKonversi08 {
     int size;
 
     public StackKonversi08() {
-        this.size = 32; // Ukuran default stack
+        this.size = 32;
         tumpukanBiner = new int[size];
         top = -1;
     }
